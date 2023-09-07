@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ElHogar_DeLos_Libros.AccesoADatos\ElHogar_DeLos_Libros.AccesoADatos.csproj" />
+    <ProjectReference Include="..\ElHogar_DeLos_Libros.EntidadesDeNegocio\ElHogar_DeLos_Libros.EntidadesDeNegocio.csproj" />
+  </ItemGroup>
+
+</Project>

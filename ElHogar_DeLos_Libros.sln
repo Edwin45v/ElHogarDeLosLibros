@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElHogar_DeLos_Libros.EntidadesDeNegocio", "ElHogar_DeLos_Libros.EntidadesDeNegocio\ElHogar_DeLos_Libros.EntidadesDeNegocio.csproj", "{FD58CEAC-A238-4CA2-9444-3DF81BFE66C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElHogar_DeLos_Libros.AccesoADatos", "ElHogar_DeLos_Libros.AccesoADatos\ElHogar_DeLos_Libros.AccesoADatos.csproj", "{802E68B8-7188-45F9-AF3E-69C9BDEAB43A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElHogar_DeLos_Libros.LogicaDeNegocio", "ElHogar_DeLos_Libros.LogicaDeNegocio\ElHogar_DeLos_Libros.LogicaDeNegocio.csproj", "{1800F7EB-0719-40D2-8597-ACB44F9BEC34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElHogar_DeLos_Libros.PruebasUnitarias", "ElHogar_DeLos_Libros.PruebasUnitarias\ElHogar_DeLos_Libros.PruebasUnitarias.csproj", "{BE351EE9-0D76-45EA-8529-84E280022FF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElHogar_DeLos_Libros.WebAPI", "ElHogar_DeLos_Libros.WebAPI\ElHogar_DeLos_Libros.WebAPI.csproj", "{A78A220F-E242-4E90-B996-A6857B9C5ADE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD58CEAC-A238-4CA2-9444-3DF81BFE66C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD58CEAC-A238-4CA2-9444-3DF81BFE66C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD58CEAC-A238-4CA2-9444-3DF81BFE66C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD58CEAC-A238-4CA2-9444-3DF81BFE66C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{802E68B8-7188-45F9-AF3E-69C9BDEAB43A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{802E68B8-7188-45F9-AF3E-69C9BDEAB43A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{802E68B8-7188-45F9-AF3E-69C9BDEAB43A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{802E68B8-7188-45F9-AF3E-69C9BDEAB43A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1800F7EB-0719-40D2-8597-ACB44F9BEC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1800F7EB-0719-40D2-8597-ACB44F9BEC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1800F7EB-0719-40D2-8597-ACB44F9BEC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1800F7EB-0719-40D2-8597-ACB44F9BEC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE351EE9-0D76-45EA-8529-84E280022FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE351EE9-0D76-45EA-8529-84E280022FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE351EE9-0D76-45EA-8529-84E280022FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE351EE9-0D76-45EA-8529-84E280022FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78A220F-E242-4E90-B996-A6857B9C5ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78A220F-E242-4E90-B996-A6857B9C5ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78A220F-E242-4E90-B996-A6857B9C5ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78A220F-E242-4E90-B996-A6857B9C5ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D052D0B1-2A33-4F5C-8BDA-5BA1EE6DE958}
+	EndGlobalSection
+EndGlobal
