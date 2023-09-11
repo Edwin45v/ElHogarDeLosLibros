@@ -8,5 +8,6 @@ namespace ElHogar_DeLos_Libros.EntidadesDeNegocio
 {
     public class QUIZ
     {
+
     }
 }
