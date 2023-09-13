@@ -11,7 +11,7 @@ namespace ElHogar_DeLos_Libros.EntidadesDeNegocio
     public class Grado
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Nombre es obligatorio")]
         [StringLength(30, ErrorMessage = "Maximo 30 caracteres")]

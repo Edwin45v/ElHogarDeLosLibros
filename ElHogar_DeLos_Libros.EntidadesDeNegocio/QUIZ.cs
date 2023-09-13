@@ -11,7 +11,7 @@ namespace ElHogar_DeLos_Libros.EntidadesDeNegocio
     public class QUIZ
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Tu pregunta es obligatorio")]
         [StringLength(50, ErrorMessage = "Maximo 50 caracteres")]
