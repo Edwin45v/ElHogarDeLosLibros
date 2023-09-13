@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using ElHogar_DeLos_Libros.EntidadesDeNegocio
+using ElHogar_DeLos_Libros.EntidadesDeNegocio;
 
 namespace ElHogar_DeLos_Libros.AccesoADatos
 {
@@ -190,5 +190,5 @@ namespace ElHogar_DeLos_Libros.AccesoADatos
             return result;
         }
     }
-}
+
 }

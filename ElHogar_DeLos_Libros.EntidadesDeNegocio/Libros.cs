@@ -33,7 +33,7 @@ namespace ElHogar_DeLos_Libros.EntidadesDeNegocio
         [MaxLength(200, ErrorMessage = "El largo maximo es 200 caratesres")]
         public string Imagen { get; set; }
         [NotMapped ]
-        public int top_aux { get; set; }
+        public int Top_Aux { get; set; }
         public QUIZ QUIZ { get; set; }
     }
     public enum Categoria_Libros
