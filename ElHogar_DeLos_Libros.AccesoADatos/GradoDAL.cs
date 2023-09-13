@@ -84,14 +84,14 @@ namespace ElHogar_DeLos_Libros.AccesoADatos
 
         public static async Task<List<Grado>> BuscarAsync(Grado pGrado)
         {
-            var roles = new List<Grado>();
+            var grado = new List<Grado>();
             using (var bdContexto = new BDContexto())
             {
                 var select = bdContexto.Grado.AsQueryable();
                 select = QuerySelect(select, pGrado);
-                roles = await select.ToListAsync();
+                grado = await select.ToListAsync();
             }
-            return roles;
+            return grado;
         }
     }
 }
