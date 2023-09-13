@@ -31,7 +31,7 @@ namespace ElHogar_DeLos_Libros.EntidadesDeNegocio
         public string Imagen { get; set; }
         [NotMapped]
         public int top_aux { get; set; }
-        public Grado Grado { get; set; }
+        public Alumnos Grado { get; set; }
     }
 }
 
