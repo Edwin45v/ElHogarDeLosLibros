@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElHogar_DeLos_Libros.AccesoADatos
 {
-    internal class LibrosDAL
+    public class LibrosDAL
     {
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +31,7 @@ namespace ElHogar_DeLos_Libros.EntidadesDeNegocio
         public string Imagen { get; set; }
         [NotMapped]
         public int top_aux { get; set; }
-        public Alumnos_Grado { get; set; }
+        public Grado Grado { get; set; }
     }
 }
 
