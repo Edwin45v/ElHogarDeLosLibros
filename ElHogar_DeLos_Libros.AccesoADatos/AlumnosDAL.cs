@@ -12,7 +12,7 @@ namespace ElHogar_DeLos_Libros.AccesoADatos
     public class AlumnosDAL
     {
 
-        public static async Task<int> CrearAsync(AlumnosDAL pAlumnos)
+        public static async Task<int> CrearAsync(Alumnos pAlumnos)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
@@ -24,16 +24,16 @@ namespace ElHogar_DeLos_Libros.AccesoADatos
             return result;
         }
 
-        public static async Task<int> ModificarAsync(AlumnosDAL pAlumnos)
+        public static async Task<int> ModificarAsync(Alumnos pAlumnos)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
             {
-                var alumnos = await bdContexto.alumnos.FirstOrDefaultAsync(s => s.Id == pAlumnos.Id);
-                alumnos.IdGrado = pAlumno.IdGrado;
+                var alumnos = await bdContexto.Alumnos.FirstOrDefaultAsync(s => s.Id == pAlumnos.Id);
+                alumnos.GradoId = pAlumnos.GradoId;
                 alumnos.Nombre = pAlumnos.Nombre;
                 alumnos.Apellido = pAlumnos.Apellido;
-                alumnos.imagen = pAlumnos.imagen;
+                alumnos.Imagen = pAlumnos.Imagen;
                 bdContexto.Update(alumnos);
                 result = await bdContexto.SaveChangesAsync();
 
@@ -41,44 +41,44 @@ namespace ElHogar_DeLos_Libros.AccesoADatos
             return result;
         }
 
-        public static async Task<int> EliminarAsync(AlumnosDAL pAlumnos)
+        public static async Task<int> EliminarAsync(Alumnos pAlumnos)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
             {
-                var alumnos = await bdContexto.alumnos.FirstOrDefaultAsync(s => s.Id == pAlumnos.Id);
-                bdContexto.alumnos.Remove(alumnos);
+                var alumnos = await bdContexto.Alumnos.FirstOrDefaultAsync(s => s.Id == pAlumnos.Id);
+                bdContexto.Alumnos.Remove(alumnos);
                 result = await bdContexto.SaveChangesAsync();
             }
             return result;
         }
 
-        public static async Task<alumnos> ObtenerPorIdAsync(AlumnosDAL pAlumnos)
+        public static async Task<Alumnos> ObtenerPorIdAsync(Alumnos pAlumnos)
         {
-            var alumnos = new alumnos();
+            var alumnos = new Alumnos();
             using (var bdContexto = new BDContexto())
             {
-                alumnos = await bdContexto.alumnos.FirstOrDefaultAsync(s => s.Id == pAlumnos.Id);
+                alumnos = await bdContexto.Alumnos.FirstOrDefaultAsync(s => s.Id == pAlumnos.Id);
             }
             return alumnos;
         }
 
-        public static async Task<List<alumnos>> ObtenerTodosAsync()
+        public static async Task<List<Alumnos>> ObtenerTodosAsync()
         {
-            var alumnos = new List<alumnos>();
+            var alumnos = new List<Alumnos>();
             using (var bdContexto = new BDContexto())
             {
-                alumnos = await bdContexto.alumnos.ToListAsync();
+                alumnos = await bdContexto.Alumnos.ToListAsync();
             }
             return alumnos;
         }
 
-        internal static IQueryable<alumnos> QuerySelect(IQueryable<alumnos> pQuery, alumnos pAlumnos)
+        internal static IQueryable<Alumnos> QuerySelect(IQueryable<Alumnos> pQuery, Alumnos pAlumnos)
         {
             if (pAlumnos.Id > 0)
                 pQuery = pQuery.Where(s => s.Id == pAlumnos.Id);
-            if (pAlumnos.IdGrado > 0)
-                pQuery = pQuery.Where(s => s.IdGrado == pAlumnos.IdGrado);
+            if (pAlumnos.GradoId > 0)
+                pQuery = pQuery.Where(s => s.GradoId == pAlumnos.GradoId);
             if (!string.IsNullOrWhiteSpace(pAlumnos.Nombre))
                 pQuery = pQuery.Where(s => s.Nombre.Contains(pAlumnos.Nombre));
             if (!string.IsNullOrWhiteSpace(pAlumnos.Apellido))
@@ -89,25 +89,25 @@ namespace ElHogar_DeLos_Libros.AccesoADatos
             return pQuery;
         }
 
-        public static async Task<List<alumnos>> BuscarAsync(alumnos pAlumnos)
+        public static async Task<List<Alumnos>> BuscarAsync(Alumnos pAlumnos)
         {
-            var alumnos = new List<alumnos>();
+            var alumnos = new List<Alumnos>();
             using (var bdContexto = new BDContexto())
             {
-                var select = bdContexto.alumnos.AsQueryable();
+                var select = bdContexto.Alumnos.AsQueryable();
                 select = QuerySelect(select, pAlumnos);
                 alumnos = await select.ToListAsync();
             }
             return alumnos;
         }
 
-        public static async Task<List<alumnos>> BuscarIncluirGradosAsync(alumnos pAlumnos)
+        public static async Task<List<Alumnos>> BuscarIncluirGradosAsync(Alumnos pAlumnos)
         {
-            var alumnos = new List<alumnos>();
+            var alumnos = new List<Alumnos>();
             using (var bdContexto = new BDContexto())
             {
-                var select = bdContexto.alumnos.AsQueryable();
-                select = QuerySelect(select, pAlumnos).Include(s => s.Grados).AsQueryable();
+                var select = bdContexto.Alumnos.AsQueryable();
+                select = QuerySelect(select, pAlumnos).Include(s => s.GradoId).AsQueryable();
                 alumnos = await select.ToListAsync();
             }
             return alumnos;

@@ -14,45 +14,59 @@ namespace ElHogar_DeLos_Libros.AccesoADatos.Tests
     {
         private static Rol rolInicial = new Rol { Id = 2 };
         [TestMethod()]
-        public void CrearAsyncTest()
+        public async void T1CrearAsyncTest()
         {
-            Assert.Fail();
+            var rol = new Rol();
+            rol.Nombre = "Administrador";
+            int result = await RolDAL.CrearAsync(rol);
+            Assert.AreNotEqual(0, result);
+            rolInicial.Id = rol.Id;
         }
 
         [TestMethod()]
-        public void CrearAsyncTest1()
+        public async void T2ModificarAsyncTest()
         {
-            Assert.Fail();
+            var rol = new Rol();
+            rol.Id = rolInicial.Id;
+            rol.Nombre = "Admin";
+            int result = await RolDAL.ModificarAsync(rol);
+            Assert.AreNotEqual(0, result);
         }
 
         [TestMethod()]
-        public void ModificarAsyncTest()
+        public async void T3EliminarAsyncTest()
         {
-            Assert.Fail();
+            var rol = new Rol();
+            rol.Id = rolInicial.Id;
+            int result = await RolDAL.EliminarAsync(rol);
+            Assert.AreNotEqual(0, result);
         }
 
         [TestMethod()]
-        public void EliminarAsyncTest()
+        public async void T4ObtenerPorIdAsyncTest()
         {
-            Assert.Fail();
+            var rol = new Rol();
+            rol.Id = rolInicial.Id;
+            var resultRol = await RolDAL.ObtenerPorIdAsync(rol);
+            Assert.AreEqual(rol.Id, resultRol.Id);
         }
 
         [TestMethod()]
-        public void ObtenerPorIdAsyncTest()
+        public async void T5ObtenerTodosAsyncTest()
         {
-            Assert.Fail();
+            var resultRoles = await RolDAL.ObtenerTodosAsync();
+            Assert.AreNotEqual(0, resultRoles.Count);
         }
 
         [TestMethod()]
-        public void ObtenerTodosAsyncTest()
+        public async void T6BuscarAsyncTest()
         {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void BuscarAsyncTest()
-        {
-            Assert.Fail();
+            var rol = new Rol();
+            rol.Nombre = "a";
+            rol.Top_Aux = 10;
+            var resultRoles = await RolDAL.BuscarAsync(rol);
+            Assert.AreNotEqual(0, resultRoles.Count);
         }
     }
 }
+
