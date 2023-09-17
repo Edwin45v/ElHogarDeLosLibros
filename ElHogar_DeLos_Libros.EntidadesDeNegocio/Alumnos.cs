@@ -10,6 +10,7 @@ namespace ElHogar_DeLos_Libros.EntidadesDeNegocio
 {
     public class Alumnos
     {
+
         [Key]
         public int Id { get; set; }
 
