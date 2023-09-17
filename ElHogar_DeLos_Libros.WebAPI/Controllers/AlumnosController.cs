@@ -84,12 +84,13 @@ namespace ElHogar_DeLos_Libros.WebAPI.Controllers
         [HttpPost("Buscar")]
         public async Task<List<Alumnos>> Buscar([FromBody] object pAlumnos)
         {
+
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             string strAlumnos = JsonSerializer.Serialize(pAlumnos);
-            Alumnos alumno = JsonSerializer.Deserialize<Alumnos>(strAlumnos, option);
-            var alumnos = await alumnosBL.BuscarIncluirGradoAsync(alumno);
-            alumnos.ForEach(s => s.Grado.Alumnos = null);
-            return alumnos;
+            Alumnos alumnos = JsonSerializer.Deserialize<Alumnos>(strAlumnos, option);
+            var alumno = await alumnosBL.BuscarIncluirGradoAsync(alumnos);
+            alumno.ForEach(s => s.Grado.Alumnos = null); // Evitar la redundacia de datos
+            return alumno;
         }
     }
 }
