@@ -18,7 +18,7 @@ namespace ElHogar_DeLos_Libros.AccesoADatos
         public DbSet<QUIZ> QUIZ { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-NROUOQ6;Initial Catalog=ElHogarDeLosLibros2;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-NROUOQ6;Initial Catalog=ElHogarDeLosLibros3;Integrated Security=True");
         }
     }
 }

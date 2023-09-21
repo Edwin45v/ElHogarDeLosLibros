@@ -73,7 +73,7 @@ app.UseCors(options =>
     options.AllowAnyMethod();
     options.AllowAnyHeader();
 });
-app.Start();
+//app.Start();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -84,7 +84,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthentication();
 app.UseAuthorization(); 
 
 app.MapControllers();

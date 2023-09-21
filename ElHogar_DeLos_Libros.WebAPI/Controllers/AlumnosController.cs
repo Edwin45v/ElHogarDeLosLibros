@@ -87,10 +87,10 @@ namespace ElHogar_DeLos_Libros.WebAPI.Controllers
 
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             string strAlumnos = JsonSerializer.Serialize(pAlumnos);
-            Alumnos alumnos = JsonSerializer.Deserialize<Alumnos>(strAlumnos, option);
-            var alumno = await alumnosBL.BuscarIncluirGradoAsync(alumnos);
-            alumno.ForEach(s => s.Grado.Alumnos = null); // Evitar la redundacia de datos
-            return alumno;
+            Alumnos alumno = JsonSerializer.Deserialize<Alumnos>(strAlumnos, option);
+            var alumnos = await alumnosBL.BuscarIncluirGradoAsync(alumno);
+            alumnos.ForEach(s => s.Grado.Alumnos = null); // Evitar la redundacia de datos
+            return alumnos;
         }
     }
 }
